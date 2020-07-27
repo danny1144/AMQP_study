@@ -35,3 +35,10 @@ python helloword_producer.py "quit"
 - direct(发布与订阅 完全匹配)
 - topic(主题， 规则匹配)
 - fanout(广播)
+## 使用发送方确认模式来确认投递
+
+*** 
+由于事务会影响性能，因此我们专注于使用publish confirm作为消息投递保障的首选方案 
+***
+
+
