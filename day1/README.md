@@ -20,11 +20,18 @@
 
 ```
 开始生产
- python helloword_producer.py "hello_world"
+python helloword_producer.py "hello_world"
 
 停止生产
 python helloword_producer.py "quit" 
-
-
-python 
 ```
+
+-  交换器
+***
+用来接收生产者发送的消息并将这些消息路由给服务器中的队列。
+***
+三种常用的交换器类型：
+
+- direct(发布与订阅 完全匹配)
+- topic(主题， 规则匹配)
+- fanout(广播)
