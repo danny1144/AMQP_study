@@ -92,7 +92,38 @@ rabbitmqctl list_permissions -p test_vhost
 查看用户权限
 
 rabbitmqctl list_user_permissions zxp
+
+查看交换器的名称、类型、是否持久化、是否自动删除
+rabbitmqctl list_exchanges  name type durable auto_delete
+
+查看绑定列表、
+rabbitmqctl list_bindings
+
+查看erlang令牌，通过令牌交换获取认证
+cat .erlang.cookie 
+VLCXLMJNFFXQLQSHNSXS
+erlang 函数
+
+erl -sname test
+用短名称启动RabbitMQ 
+
+node(). 查找出节点名称
+
+net_adm:names().
+{ok,[{"rabbit",25672},{"test",46123}]}
+
+建立连接
+
+54*/
+pang
+
+
+
 ```
 
+## Mnesia 和主机名
+
+Mnesia 作为erlang数据库，存储队列，交换器绑定等信息
+Mnesia 会根据主机名 创建数据库的schema。如果由于网路重新配置的原因，主机名修改了。那么mnesia 会无法载入旧的schema
 
 
