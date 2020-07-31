@@ -1,0 +1,23 @@
+version: "2"
+services:
+
+  rabbitmq-1:
+    container_name: rabbitmq-1    
+    networks: ["vnet"]
+    hostname: rabbitmq-1.vnet
+    build: .
+    ports:  
+      - 15672:15672
+    environment:
+      - SERVICE_2181_NAME=zookeeper
+      - SERVICE_2888_IGNORE=true
+      - SERVICE_3888_IGNORE=true
+      
+    command: -server 1 1 vnet
+
+
+networks: 
+  vnet: 
+    external: 
+      name: vnet 
+    

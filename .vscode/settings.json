@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "H:\\server\\miniconda3\\envs\\py38\\python.exe",
+    "python.pythonPath": "D:\\server\\miniconda\\envs\\rabbit\\python.exe",
     "python.linting.flake8Enabled": true,
     "python.formatting.provider": "autopep8",
     "python.linting.flake8Args": [
@@ -9,8 +9,8 @@
     "python.jediEnabled": false,
     "python.autoComplete.addBrackets": true,
     "python.autoComplete.extraPaths": [
-        "H:\\server\\miniconda3\\envs\\py38\\Lib\\site-packages",
-        "H:\\server\\miniconda3\\envs\\py38\\Scripts",
+        "d:\\server\\miniconda3\\envs\\rabbit\\Lib\\site-packages",
+        "d:\\server\\miniconda3\\envs\\rabbit\\Scripts",
     
     ],
     "python.analysis.disabled": [
@@ -20,5 +20,6 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.fontSize": 14,
-    "files.autoGuessEncoding":true
+    "files.autoGuessEncoding": true,
+    "eggHelper.serverPort": 35684
 }
