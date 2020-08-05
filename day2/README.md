@@ -1,11 +1,28 @@
+
 ## 启动节点
 
 ```
 守护进程启动
  rabbitmqserver -server -detached
+
+ 不加参数默认默认使用
+ 节点名称  rabbit 
+ 监听端口 - 5672
+
+ 集群启动
+
+ RABBITMQ_NODE_PORT =5672 RABBITMQ_NODENAME=rabbit
 ```
+## 内存节点
+内存节点保存所有的队列，绑定，交换器，用户、权限、和vhost的元数据读写性能好，不能持久化
 
+## 磁盘节点
+元数据存储在磁盘，可以持久化。性能差些
+## 配置 Cookie
 
+Erlang节点间通过认证 Erlang cookie的方式完成相互之间的通信
+rabbitmqctl 使用 erlang otp通信机制来和rabbit通信
+因此集群直接需要拷贝同一份 cookie 路径为/root/.erlang.cookie
 ## 停止节点
 
 break： abort continue proc info info  loaded  version kill db-table distribution
