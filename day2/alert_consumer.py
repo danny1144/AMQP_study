@@ -17,7 +17,6 @@ if __name__ == '__main__':
         AMQP_HOST, AMQP_PORT, AMQP_VHOST, credits_broker=credits_broker)
     conn_broker = pika.BlockingConnection(conn_params)
     channel = conn_broker.channel()
-
     channel.exchange_declare(AMQP_EXCHANGE, exchange_type='topic')
     channel.queue_declare(CRITICAL_QUEUE)
     channel.queue_declare(LIMIT_QUEUE)
